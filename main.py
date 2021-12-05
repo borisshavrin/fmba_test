@@ -58,7 +58,7 @@ def get_list_labels() -> list:
         labels = {dirname: []}
         for filename, extensions in images_or_meta.items():
             items_path_list = []
-            if len(extensions) > 1:
+            if 'json' in extensions and ('png' in extensions or 'jpeg' in extensions or 'jpg' in extensions):
                 items_path_list.extend(glob(label_path + "/" + f"{filename}.*"))
                 items_path_list = [i.replace(os.sep, "/") for i in items_path_list]
                 labels[dirname].append(items_path_list)
