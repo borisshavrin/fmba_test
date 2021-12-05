@@ -5,7 +5,7 @@ from glob import glob
 labels_dir = "/tmp/labels/"
 
 
-def makedirs():
+def create_dirs():
     """Исходные данные"""
     os.makedirs(labels_dir, exist_ok=True)
 
@@ -74,6 +74,6 @@ def write_list_labels(filename):
 
 
 if __name__ == "__main__":
-    makedirs()
+    create_dirs()
     with open(os.path.join(labels_dir, "test.txt"), 'w', encoding="utf-8") as file:
         write_list_labels(file)
