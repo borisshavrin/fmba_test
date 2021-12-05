@@ -65,7 +65,7 @@ CREATE VIEW sum_goods_by_goods_type
          ON sum_goods_by_goods_id.goods_type_id = gt.goods_type_id
     GROUP BY gt.goods_type_id;
 
-SELECT sum_by_type AS max_sum, goods_type_name
+SELECT goods_type_name
 FROM sum_goods_by_goods_type
 WHERE sum_by_type = (
     SELECT max(sum_by_type)
