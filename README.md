@@ -36,9 +36,19 @@ docker run --rm  --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5400:5432 -v
 **-p** Задает диапазон портов;  
 **-v** Пробрасывает директорию файловой системы внутрь контейнера;  
 
-После успешного запуска контейнера можно воспользоваться установленной программой pgAdmin и создать сервер test
+После успешного запуска контейнера можно воспользоваться установленной программой pgAdmin и создать сервер test:  
+<p align="center">
+  <img src="https://github.com/borisshavrin/sms_activate_bot/blob/master/static/github/img/titleBot.jpg" width=250px>
+</p>  
 
-В PyCharm подключение выглядит следующим образом
+
+В PyCharm подключение к созданному серверу выглядит следующим образом:  
+<p align="center">
+  <img src="https://github.com/borisshavrin/sms_activate_bot/blob/master/static/github/img/titleBot.jpg" width=250px>
+</p>  
 
 
-  
+Существует второй способ запуска контейнера с БД - [конфигурационный файл][1] в формате yaml
+
+
+[1]: https://github.com/borisshavrin/fmba_test/blob/master/docker-compose.yaml
