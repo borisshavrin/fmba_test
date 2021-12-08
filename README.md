@@ -4,13 +4,18 @@
   Task_1: Необходимо вывести самую популярную категорию товаров
 </p>  
 
-#### Для начала выполним конфигурацию Docker, где запустим БД PostgreSQL.  
+### Для начала выполним конфигурацию Docker, где запустим БД PostgreSQL  
+#### Первый способ:
 
 > Перед созданием контейнера (назовем его pg-docker), проверим не занято ли это имя  
 
 ```
   docker container ls
 ```  
+<p align="center">
+  <img src="https://github.com/borisshavrin/fmba_test/blob/master/img/docker%20container%20ls.png">
+</p>  
+
 > Видим, что контейнер с этим именем уже запущен. Так же, зная, что данный контейнер не используется, остановим и удалим его  
 ```
 docker stop pg-docker
@@ -38,17 +43,34 @@ docker run --rm  --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5400:5432 -v
 
 После успешного запуска контейнера можно воспользоваться установленной программой pgAdmin и создать сервер test:  
 <p align="center">
-  <img src="https://github.com/borisshavrin/sms_activate_bot/blob/master/static/github/img/titleBot.jpg" width=250px>
+  <img src="https://github.com/borisshavrin/fmba_test/blob/master/img/pgadmin.png" width=840px>
 </p>  
 
 
 В PyCharm подключение к созданному серверу выглядит следующим образом:  
 <p align="center">
-  <img src="https://github.com/borisshavrin/sms_activate_bot/blob/master/static/github/img/titleBot.jpg" width=250px>
+  <img src="https://github.com/borisshavrin/fmba_test/blob/master/img/pycharm.png" width=840px>
 </p>  
 
+#### Второй способ запуска контейнера с БД:  
 
-Существует второй способ запуска контейнера с БД - [конфигурационный файл][1] в формате yaml
+Второй способ заключается в создании [конфигурационного файла][1] в формате yaml.  
+При таком подходе автоматически применяются все выбранные настройки, включая сервис администрирования БД Adminer (аналогичный pgadmin).  
+
+<hr>  
+
+#### Решение 1-й задачи в файле [sql.sql][2]:  
+Для выполнения поставленной задачи было решено использовать Представления. Данное решение позволяет сократить код, повысить его читаемость и создать возможность неоднократно использовать созданное Представление.  
+
+<p align="center">
+  Task_2: Найти изображения для которых есть метаданные (пары), и сформировать из них 
+</p>  
+
+#### Решение 2-й задачи в файле [main.py][3]:
+Для выполнения данной задачи используется библиотека glob с функцией glob(), определяющей путь до файла с указанным именеи и\или расширением. 
 
 
-[1]: https://github.com/borisshavrin/fmba_test/blob/master/docker-compose.yaml
+
+[1]: https://github.com/borisshavrin/fmba_test/blob/master/docker-compose.yaml  
+[2]: https://github.com/borisshavrin/fmba_test/blob/master/sql.sql  
+[3]: https://github.com/borisshavrin/fmba_test/blob/master/main.py
