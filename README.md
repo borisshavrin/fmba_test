@@ -72,6 +72,6 @@ docker run --rm  --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5400:5432 -v
 
 
 
-[1]: https://github.com/borisshavrin/fmba_test/blob/master/docker-compose.yaml  
+[1]: https://github.com/borisshavrin/fmba_test/blob/9e46120e7c9c27f2b024b832f19e294c3fee1b8e/img/docker-container-ls.png 
 [2]: https://github.com/borisshavrin/fmba_test/blob/master/sql.sql  
 [3]: https://github.com/borisshavrin/fmba_test/blob/master/main.py
