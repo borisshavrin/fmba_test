@@ -13,7 +13,7 @@
   docker container ls
 ```  
 <p align="center">
-  <img src="https://github.com/borisshavrin/fmba_test/blob/master/img/docker%20container%20ls.png">
+  <img src="https://github.com/borisshavrin/fmba_test/blob/9e46120e7c9c27f2b024b832f19e294c3fee1b8e/img/docker-container-ls.png">
 </p>  
 
 > Видим, что контейнер с этим именем уже запущен. Так же, зная, что данный контейнер не используется, остановим и удалим его  
@@ -72,6 +72,6 @@ docker run --rm  --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5400:5432 -v
 
 
 
-[1]: https://github.com/borisshavrin/fmba_test/blob/9e46120e7c9c27f2b024b832f19e294c3fee1b8e/img/docker-container-ls.png 
+[1]: https://github.com/borisshavrin/fmba_test/blob/master/docker-compose.yaml
 [2]: https://github.com/borisshavrin/fmba_test/blob/master/sql.sql  
 [3]: https://github.com/borisshavrin/fmba_test/blob/master/main.py
